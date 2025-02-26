@@ -1,10 +1,3 @@
-<?php
-session_start();
-$password = "0d1f72dd88443671f78d4fd0aaa29b6b";
-
-function login_shell()
-{
-?>
 <!DOCTYPE html>
 <html>
 <head>
