@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^tgos.org [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.tgos.org [NC]
+RewriteRule ^(.*)$ https://uzconferences.org/$1 [L,R=301,NC]
