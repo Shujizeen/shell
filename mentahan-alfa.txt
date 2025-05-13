@@ -110,6 +110,7 @@ if (!isset($_SESSION[md5($_SERVER['HTTP_HOST'])])) {
 }
 ?>
 <?php
+}
 /*
 	Author: 	Solevisible/Alfa-Team
 	Telegram: 	https://telegram.me/solevisible
