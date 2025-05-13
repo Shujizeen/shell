@@ -170,7 +170,7 @@ window.onerror = ClearError;
    }
    </script>
 </html>
-<a><font color="maroon"><img src="https://res.cloudinary.com/dpgvahkt3/image/upload/v1747179332/911_gw7kxb.png" width="50" height="50"></font></font></a>
+<a><font color="maroon"><img src="https://res.cloudinary.com/dpgvahkt3/image/upload/v1747180355/Untitled-2_hsz6vn.png" width="50" height="50"></font></font></a>
 
 <script type="text/javascript" src="https://nathanprinsley-files.prinsh.com/data-1/js/efek-salju-faisal.js" /></script>
 <script type="text/javascript">
